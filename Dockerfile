@@ -1,5 +1,4 @@
 FROM openjdk:8-jdk
-MAINTAINER Emerson Cloud <emersoncloud@gmail.com>
 
 RUN mkdir -p /opt/android-sdk-linux && mkdir -p ~/.android && touch ~/.android/repositories.cfg
 WORKDIR /opt
@@ -29,4 +28,4 @@ RUN cd /opt/android-sdk-linux && \
 RUN wget -q --output-document=android-ndk.zip https://dl.google.com/android/repository/android-ndk-r18-linux-x86_64.zip && \
 	unzip android-ndk.zip && \
 	rm -f android-ndk.zip && \
-	mv android-ndk-r15c android-ndk-linux
+	mv android-ndk-r18 android-ndk-linux
